@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NextGen Learners — Apply for Internship</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#" class="brand">
+        <span class="brand-bracket">&lt;/&gt;</span>
+        <span class="brand-name">next<span class="brand-accent">Gen</span></span>
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#apply">About</a></li>
+        <li><a href="#submissions">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="hero-eyebrow">// internship_application.run()</p>
+      <h1 class="hero-title">Empowering minds.<br>Building futures.</h1>
+      <p class="hero-sub">Five tracks. One application. Fill it out below and your submission
+        gets validated, timestamped, and logged — just like the real thing.</p>
+    </section>
+
+    <section class="apply" id="apply">
+      <h2 class="section-title">Apply for Internship</h2>
+      <p class="section-sub">All fields are required. Errors show inline — no popups.</p>
+
+      <div class="terminal-card">
+        <div class="terminal-titlebar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="terminal-filename">apply_now.form</span>
+        </div>
+
+        <form id="applicationForm" class="terminal-body" novalidate>
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Maria Shaikh" />
+            <span class="error-message" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="you@example.com" />
+            <span class="error-message" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="03XXXXXXXXX" />
+            <span class="error-message" id="phoneError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="domain">Domain</label>
+            <select id="domain" name="domain">
+              <option value="">-- Select a Domain --</option>
+              <option value="Web Dev">Web Dev</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="AI Tools & Prompt Engineering">AI Tools &amp; Prompt Engineering</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Video Editing">Video Editing</option>
+            </select>
+            <span class="error-message" id="domainError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="university">University</label>
+            <input type="text" id="university" name="university" placeholder="e.g. SZABIST" />
+            <span class="error-message" id="universityError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="statement">Short Statement</label>
+            <textarea id="statement" name="statement" rows="4" placeholder="Tell us why you want to join, in a couple of sentences..."></textarea>
+            <span class="error-message" id="statementError"></span>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+
+        <div id="thankYouMessage" class="thank-you hidden"></div>
+      </div>
+    </section>
+
+    <section class="submissions" id="submissions">
+      <h2 class="section-title">My Submissions</h2>
+      <p class="section-sub">A running log of every application you've submitted on this device.</p>
+
+      <div class="log-card">
+        <ul id="submissionsList" class="log-list">
+          <li class="log-empty">No submissions yet — fill the form above to get started.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>NextGen Learners — Code · Learn · Innovate · Succeed</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
